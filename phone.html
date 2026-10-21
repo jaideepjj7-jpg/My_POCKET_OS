@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>LOCK SCREEN</title>
+        <link rel="stylesheet" href="phone.css">
+    </head>
+    <body>
+        <div class="phone">
+            <div id="num_pad">
+                <div id="statusbar">
+                    <h3 id="time">--:--</h3>
+                    <div class="cam-circle" aria-hidden="true"></div>
+                    <h3><span>📶 | </span><span id="battery">Checking…</span></h3>
+                </div>
+                <h1 id="head">WELCOME TO CALL HOUSE </h1>
+                <h2 id="phone_no"></h2>
+                <div id="nums">
+                    <div class="divs">
+                        <button id="1"class="nums">1</button>
+                        <button id="2"class="nums">2</button>
+                        <button id="3"class="nums">3</button><br>
+                    </div><br>
+                    <div class="divs">
+                        <button id="4"class="nums">4</button>
+                        <button id="5"class="nums">5</button>
+                        <button id="6"class="nums">6</button>
+                    </div><br>
+                    <div class="divs">
+                        <button id="7"class="nums">7</button>
+                        <button id="8"class="nums">8</button>
+                        <button id="9"class="nums">9</button>
+                    </div><br>
+                    <div class="divs">
+                        <button id="back"class="nums">⬅️</button>
+                        <button id="0"class="nums">0</button>
+                        <button  id="ok"class="nums">📞</button>
+                    </div><br>
+                </div>
+            </div>
+            <div id="phone_page">
+                    <div class="cam-circle" aria-hidden="true"></div>
+                <div class="call-screen" id="call">
+                    <div class="call-avatar" id="call-avatar">?</div>
+                    <div class="call-name">Unknown</div>
+                    <div class="call-number" id="call-number"></div>
+                    <div class="call-status" id="call-status">Calling...</div>    
+                    <div class="call-controls">
+                        <button type="button" class="call-action" id="mute-btn">
+                        <span>🔇</span>
+                        <small>Mute</small>
+                        </button>
+            
+                        <button type="button" class="call-action" id="speaker-btn">
+                        <span>🔊</span>
+                        <small>Speaker</small>
+                        </button>
+                    </div>
+    
+                    <button type="button" class="call-end" id="end-call"
+                aria-label="End call">
+                        <svg viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M6.6 10.8a15 15 0 006.6 6.6l2.2-2.2a1 1 0 011-.25 11 11 0 003.6.6 1 1 0 011 1V20a1 1 0 01-1 1A17 17 0 013 4a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.45.6 3.6a1 1 0 01-.25 1z"/>
+                        </svg>
+                    </button>
+                </div>
+
+            </div>
+        </div>
+        <script src="phone.js"></script>
+    </body>
+</html>

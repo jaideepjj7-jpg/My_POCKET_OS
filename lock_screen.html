@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>LOCK SCREEN</title>
+    <link rel="stylesheet" href="lock_screen.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body>
+    <div class="phone">
+        <div id="statusbar">
+            <h3>JIO 4G | JIO</h3>
+            <div class="cam-circle" aria-hidden="true"></div>
+            <h3><span id="icons_bar"></span><span>📶 | </span><span id="battery">Checking…</span></h3>
+        </div>
+        <br>
+        <div id="toolbar">
+            <div id="tools1">
+                <div class="feature">
+                    <div class="tools"><i class="fa-solid fa-wifi"style="font-size:24px; color:white; justify-self:center;"id="wifisign"align = "center"></i></div>
+                            <h5 class="textw">wifi</h5>
+                </div>
+                <div class="vertical-line"></div>
+                <div class="feature">
+                    <div class="tools"><i class="fa-brands fa-bluetooth-b"style="font-size:24px; color:white; justify-self:center;"id="toothsign"align = "center"></i></div>
+                    <h5 class="textw">bluetooth</h5>
+                </div>
+ 
+                <div class="feature">
+                    <div class="tools"><i class="fa-solid fa-eye"style="font-size:24px; color:white; justify-self:center;"id="eyesign"align = "center"></i></div>
+                    <h5 class="textw">Eye prot mode</h5>
+                </div>
+
+                <div class="feature">
+                    <div class="tools"><i class="fa-solid fa-plane"style="font-size:24px; color:white; justify-self:center;"id="airplanesign"align = "center"></i></div>
+                    <h5 class="textw">Airplane mode</h5>
+                </div>
+                        
+                <div class="feature">
+                    <div class="tools"><i class="fa-solid fa-battery-half"style="font-size:24px; color:white; justify-self:center;"id="batterysign"align = "center"></i></div>
+                    <h5 class="textw">Battery saver</h5>
+                </div>
+            </div>
+            <div id="tools2">
+                <div class="feature">
+                    <div class="tools"><i class="fa-solid fa-universal-access"style="font-size:24px; color:white; justify-self:center;"id="assisign"align = "center"></i></div>
+                    <h5 class="textw">Screen assistant</h5>
+                </div>
+                        
+                <div class="feature">
+                    <div class="tools"><i class="fa-solid fa-gauge"style="font-size:24px; color:white; justify-self:center;"id="datasign"align = "center"></i></div>
+                    <h5 class="textw">Data saver</h5>
+                </div>
+
+                <div class="feature">
+                    <div class="tools"><i class="fa-solid fa-bell-slash"style="font-size:24px; color:white; justify-self:center;"id="disturbsign"align = "center"></i></div>
+                    <h5 class="textw">Do not disturb</h5>
+                </div>
+                <div class="feature">
+                    <div class="tools"><i class="fa-solid fa-moon"style="font-size:24px; color:white; justify-self:center;"id="nightsign"align = "center"></i></div>
+                    <h5 class="textw">Night mode</h5>
+                </div>
+
+                <div class="feature">
+                    <div class="restart_tool" id="restart_btn"><i class="fa-solid fa-rotate-right"style="font-size:24px; color:white; justify-self:center;"id="restartsign"align = "center"></i></div>
+                    <h5 class="textw">Restart</h5>
+                </div>
+
+            </div>
+            <div id="sliders">
+                <div class="slider_row">
+                    <i class="fa-solid fa-sun"></i>
+                    <input type="range" id="brightness_slider" min="20" max="100" value="100">
+                </div>
+                <div class="slider_row">
+                    <i class="fa-solid fa-volume-high" id="volume_icon"></i>
+                    <input type="range" id="volume_slider" min="0" max="100" value="50">
+                </div>
+            </div>
+        </div>
+
+        <h1 id="lockicon" aria-label="Locked">🔒</h1>
+
+        <div id="time_date">
+            <h1 id="time">--:--</h1>
+            <h1 id="date">Loading date…</h1>
+        </div>
+        
+        <div id="app">
+            <button class="qb" id="fl" type="button" aria-label="Flashlight" aria-pressed="false" title="Toggle flashlight">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path d="M7 2h10v4l-2 3v13H9V9L7 6z"></path>
+                </svg>
+            </button>
+
+            <button class="qb" id="cm" type="button" aria-label="Open camera" title="Open camera">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" aria-hidden="true">
+                    <path d="M4 8h3l2-3h6l2 3h3v11H4z"></path>
+                    <circle cx="12" cy="13" r="3.5"></circle>
+                </svg>
+            </button>
+
+            <div class="toast" id="toast" role="status" aria-live="polite"></div>
+        </div>
+        <div id="bar"></div>
+        <div id="swipeHint">Swipe up to unlock</div>
+
+        <div id="unlockOverlay" class="unlock-overlay"
+             aria-hidden="true">
+        
+            <div class="passcode-panel">
+                <div class="passcode-title">Enter Passcode</div>
+                <div class="passcode-subtitle">
+                    The passcode is 8286.
+                </div>
+        
+                <div class="passcode-dots">
+                    <span class="pass-dot"></span>
+                    <span class="pass-dot"></span>
+                    <span class="pass-dot"></span>
+                    <span class="pass-dot"></span>
+                </div>
+        
+                <div id="passcodeError" class="passcode-error"></div>
+        
+                <div class="keypad">
+                    <button data-digit="1">1</button>
+                    <button data-digit="2">2</button>
+                    <button data-digit="3">3</button>
+                    <button data-digit="4">4</button>
+                    <button data-digit="5">5</button>
+                    <button data-digit="6">6</button>
+                    <button data-digit="7">7</button>
+                    <button data-digit="8">8</button>
+                    <button data-digit="9">9</button>
+                    <button id="backspace">⌫</button>
+                    <button data-digit="0">0</button>
+                    <button id="passcodeOK">OK</button>
+                </div>
+        
+                <div class="swipe-down-hint">
+                    Swipe down to return
+                </div>
+            </div>
+        </div>
+            <div id="brightness_filter"></div>
+            <div id="night_filter"></div>
+            <div id="eye_filter"></div>
+            <div id="color_filter"></div>
+            <div id="screenshot_flash"></div>
+
+            <div id="panel_handle" aria-label="Open panel">
+                <i class="fa-solid fa-angles-left"></i>
+            </div>
+            <div id="assistant_panel">
+                <div class="panel_option" id="opt_dnd">
+                    <i class="fa-solid fa-bell-slash"></i>
+                    <span>DND</span>
+                </div>
+                <div class="panel_option" id="opt_eye">
+                    <i class="fa-solid fa-eye"></i>
+                    <span>Eye care</span>
+                </div>
+                <div class="panel_option" id="opt_color">
+                    <i class="fa-solid fa-palette"></i>
+                    <span>Colors</span>
+                </div>
+                <div class="panel_option" id="opt_screenshot">
+                    <i class="fa-solid fa-camera"></i>
+                    <span>Screenshot</span>
+                </div>
+                <div class="panel_option" id="opt_close">
+                    <i class="fa-solid fa-xmark"></i>
+                    <span>Close</span>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="lock_screen.js"></script>
+</body>
+</html>

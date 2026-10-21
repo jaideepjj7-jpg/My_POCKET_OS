@@ -1,0 +1,616 @@
+html,body{
+    margin:0;
+    min-height:100%
+}
+body{
+    display:grid;
+    padding-bottom:0px;
+    background:#fff
+}
+.phone{
+  width:470px;height:970px;
+  background-image: url('wallpaper.svg');
+  background-size: cover;
+  border:5px solid black;
+  box-shadow:0 0 15px gray;
+  border-radius:20px;
+  justify-self:center;
+  margin-top:50px;
+  position:relative;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+.cam-circle{
+  width:20px;height:20px;
+  border:2px solid gray;
+  background:#444;
+  border-radius:50%;
+  position:absolute;
+  left:50%;
+  margin:5px;
+  transform:translateX(-50%);
+  box-sizing:border-box;
+  z-index:2;
+}
+#statusbar{
+    width: 460px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    box-sizing: border-box;
+    gap: 5px;
+    position: fixed;
+    white-space: nowrap;
+}
+#lockicon{
+    justify-self: center;
+}
+#time_date{
+    
+    margin: 5px;
+    margin-left: 20px;
+}
+#app,#app1{
+    width: 100%;
+    height: 180px;
+    margin-top: 500px;
+    padding: 10px;
+    display: flex;
+}
+#app1{
+    height: 160px;
+    margin-top: 0px;
+}
+.apps{
+    position: relative;
+    width: 90px;
+    height: 90px;
+    border: 2px solid black;
+    border-radius: 20px;
+    justify-content: center;
+    margin-top: 50px;
+    margin-bottom: 10px;
+    padding: 10px;
+    margin-left: 25px;
+    justify-self: center;
+}
+#icons{
+    justify-self: center;
+}
+img{
+    object-fit: contain;
+    width: 40px;
+    height: 40px;
+    margin-bottom: 10px;
+    justify-self: center;
+}
+#hint{
+    justify-self: center;
+    margin-bottom: 20px;
+    
+}
+#text_g{
+    margin: 0px;
+}
+#google{
+    width: 40px;
+    height: 40px;
+    justify-self: center;
+}
+#frame{
+  width:470px;height:970px;
+}
+#img_of_play_store{
+    background-size: cover;
+    width: 90px;
+    height: 90px;
+}
+#google_store_frame,#google_frame,#amazon_frame,#flipkart_frame{
+    display: none;
+}
+/* Home screen and app screen switching */
+#home {
+    display: block;
+}
+
+#google_frame {
+    display: none;
+    width: 100%;
+    height: 100%;
+}
+
+#frame {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* Toolbar: hidden by default, opens with a fade, slide and blur animation */
+#toolbar{
+    margin-top: 50px;
+    width: 450px;
+    position: fixed;
+    margin-left: 10px;
+    display: block;
+    height: 500px;
+    background: rgba(30, 30, 30, 0.4);
+    backdrop-filter: blur(0px);
+    -webkit-backdrop-filter: blur(0px);
+    -webkit-backdrop-fillter: blur(15px);
+    border-radius: 20px;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transform: translateY(-30px) scale(0.95);
+    transform-origin: top center;
+    transition: opacity 0.35s ease,
+                transform 0.45s cubic-bezier(0.22, 1, 0.36, 1),
+                backdrop-filter 0.6s ease,
+                -webkit-backdrop-filter 0.6s ease,
+                visibility 0s linear 0.45s;
+}
+#toolbar.open{
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translateY(0px) scale(1);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    transition-delay: 0s;
+}
+/* Toolbar tools pop in one after another */
+#toolbar.open .feature{
+    animation: featurePop 0.45s ease backwards;
+}
+#toolbar.open .feature:nth-child(1){
+    animation-delay: 0.05s;
+}
+#toolbar.open .feature:nth-child(3){
+    animation-delay: 0.1s;
+}
+#toolbar.open .feature:nth-child(4){
+    animation-delay: 0.15s;
+}
+#toolbar.open .feature:nth-child(5){
+    animation-delay: 0.2s;
+}
+#toolbar.open .feature:nth-child(6){
+    animation-delay: 0.25s;
+}
+@keyframes featurePop{
+    from{
+        opacity: 0;
+        transform: translateY(-12px) scale(0.8);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0px) scale(1);
+    }
+}
+.tools{
+    width: 70px;
+    height: 70px;
+    margin: 10px;
+    border: 2px solid black;
+    border-radius: 50%;
+    background-color: gray;
+    justify-content: center;
+}
+#wifisign{
+    justify-content: center;
+    margin-top:16px;
+    color: white;
+    margin-left: 16px;
+}
+.textw{
+    justify-content: center;
+    justify-self: center;
+    margin-bottom: 10px;
+}
+.feature{
+    width: 90px;
+    height: 130px;
+    justify-content: center;
+    justify-items: center;
+}
+#tools1{
+    display: flex;
+}
+.vertical-line{
+    width: 01px;
+    height: 70px;
+    background: black;
+    margin-top: 10px;
+}
+#toothsign{
+    margin-left: 25px;
+    margin-top: 19px;
+}
+#tools2{
+    display: flex;
+    margin-top: 20px;
+}
+#eyesign{
+    margin-top: 17px;
+    margin-left: 17px;
+}
+#airplanesign{
+    margin-left: 19px;
+    margin-top: 19px;
+}
+#batterysign{
+    margin-left: 18px;
+    margin-top: 18px;
+}
+#assisign{
+    margin-left: 20px;
+    margin-top: 18px;
+}
+#datasign{
+    margin-left: 19px;
+    margin-top: 18px;
+}
+#disturbsign{
+    margin-left: 16px;
+    margin-top: 18px;
+}
+h5{
+    justify-content: center;
+    justify-self: center;
+}
+
+/* App opening animation: the app grows out of the tapped icon */
+#google_frame.app-opening{
+    overflow: hidden;
+    animation: appOpen 0.45s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+@keyframes appOpen{
+    from{
+        transform: scale(0.1);
+        opacity: 0;
+        border-radius: 60px;
+    }
+    to{
+        transform: scale(1);
+        opacity: 1;
+        border-radius: 0px;
+    }
+}
+
+/* Status bar: network text fades when it changes to the date */
+#network_text{
+    transition: opacity 0.2s ease,
+                transform 0.2s ease;
+}
+#network_text.swap{
+    opacity: 0;
+    transform: translateY(-6px);
+}
+
+/* Screen assistant: small handle that is always visible on the right side */
+#panel_handle{
+    position: fixed;
+    top: var(--panel-top, 50%);
+    right: calc(var(--panel-right, 0px) - 6px);
+    width: 24px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(30, 30, 30, 0.55);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 16px 0px 0px 16px;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+    z-index: 20;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-50%) scaleX(0);
+    transform-origin: right center;
+    transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1),
+                opacity 0.25s ease;
+}
+#panel_handle.show{
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(-50%) scaleX(1);
+}
+
+/* Screen assistant: panel blooms out of the handle point */
+#assistant_panel{
+    position: fixed;
+    top: var(--panel-top, 50%);
+    right: var(--panel-right, 0px);
+    width: 76px;
+    padding: 10px 6px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    background: rgba(30, 30, 30, 0.55);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border-radius: 22px;
+    z-index: 20;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-50%) scale(0);
+    transform-origin: right center;
+    transition: transform 0.45s cubic-bezier(0.34, 1.56, 0.64, 1),
+                opacity 0.3s ease;
+}
+#assistant_panel.open{
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(-50%) scale(1);
+}
+.panel_option{
+    width: 60px;
+    height: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    background-color: gray;
+    border-radius: 16px;
+    color: white;
+    cursor: pointer;
+    user-select: none;
+    transition: background-color 0.25s ease,
+                transform 0.15s ease;
+}
+.panel_option i{
+    font-size: 20px;
+}
+.panel_option span{
+    font-size: 9px;
+    font-weight: bold;
+}
+.panel_option:active{
+    transform: scale(0.9);
+}
+.panel_option.active{
+    background-color: blue;
+}
+#opt_close{
+    background-color: rgba(190, 50, 50, 0.85);
+}
+#assistant_panel.open .panel_option{
+    animation: optionPop 0.4s ease backwards;
+}
+#assistant_panel.open .panel_option:nth-child(1){
+    animation-delay: 0.1s;
+}
+#assistant_panel.open .panel_option:nth-child(2){
+    animation-delay: 0.15s;
+}
+#assistant_panel.open .panel_option:nth-child(3){
+    animation-delay: 0.2s;
+}
+#assistant_panel.open .panel_option:nth-child(4){
+    animation-delay: 0.25s;
+}
+#assistant_panel.open .panel_option:nth-child(5){
+    animation-delay: 0.3s;
+}
+@keyframes optionPop{
+    from{
+        opacity: 0;
+        transform: translateX(20px) scale(0.6);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0px) scale(1);
+    }
+}
+
+/* Eye protection, color protection and screenshot flash cover the phone screen */
+#eye_filter,
+#color_filter,
+#screenshot_flash{
+    position: fixed;
+    top: var(--phone-top, 0px);
+    left: var(--phone-left, 0px);
+    width: var(--phone-width, 470px);
+    height: var(--phone-height, 970px);
+    border-radius: 15px;
+    pointer-events: none;
+    opacity: 0;
+    z-index: 15;
+    transition: opacity 0.5s ease;
+}
+#eye_filter{
+    background: rgba(255, 150, 30, 0.18);
+}
+#color_filter{
+    backdrop-filter: saturate(0.7) contrast(0.92);
+    -webkit-backdrop-filter: saturate(0.7) contrast(0.92);
+}
+#eye_filter.on,
+#color_filter.on{
+    opacity: 1;
+}
+#screenshot_flash{
+    background: white;
+    transition: none;
+}
+#screenshot_flash.flash{
+    animation: shutterFlash 0.4s ease;
+}
+@keyframes shutterFlash{
+    from{
+        opacity: 0.9;
+    }
+    to{
+        opacity: 0;
+    }
+}
+/* Restart tile looks like the other tools but is not a toggle */
+.restart_tool{
+    width: 70px;
+    height: 70px;
+    margin: 10px;
+    border: 2px solid black;
+    border-radius: 50%;
+    background-color: gray;
+    justify-content: center;
+    cursor: pointer;
+}
+.restart_tool:active{
+    background-color: blue;
+}
+#restartsign{
+    margin-left: 19px;
+    margin-top: 19px;
+}
+#nightsign{
+    margin-left: 21px;
+    margin-top: 18px;
+}
+
+/* Brightness and volume sliders */
+#sliders{
+    margin-top: 20px;
+    padding: 0px 20px 20px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+.slider_row{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: white;
+    font-size: 20px;
+}
+.slider_row i{
+    width: 26px;
+    text-align: center;
+}
+.slider_row input[type="range"]{
+    flex: 1;
+    height: 40px;
+    border-radius: 20px;
+    outline: none;
+    cursor: pointer;
+    -webkit-appearance: none;
+    appearance: none;
+    background: linear-gradient(to right,
+                white 0%,
+                white var(--value, 100%),
+                rgba(255, 255, 255, 0.25) var(--value, 100%),
+                rgba(255, 255, 255, 0.25) 100%);
+}
+.slider_row input[type="range"]::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: white;
+    border: 3px solid blue;
+    box-sizing: border-box;
+}
+.slider_row input[type="range"]::-moz-range-thumb{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: white;
+    border: 3px solid blue;
+    box-sizing: border-box;
+}
+
+/* Brightness and night mode cover the phone screen */
+#brightness_filter,
+#night_filter{
+    position: fixed;
+    top: var(--phone-top, 0px);
+    left: var(--phone-left, 0px);
+    width: var(--phone-width, 470px);
+    height: var(--phone-height, 970px);
+    border-radius: 15px;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+#brightness_filter{
+    background: black;
+    z-index: 12;
+}
+#night_filter{
+    background: rgba(10, 10, 50, 0.35);
+    z-index: 15;
+}
+#night_filter.on{
+    opacity: 1;
+}
+/* ===== Laptop: छोटी स्क्रीन की ऊंचाई में फोन फिट हो ===== */
+@media (min-width: 481px) and (max-height: 1030px) {
+    .phone {
+        height: calc(100vh - 70px);
+        min-height: 600px;
+    }
+}
+
+/* ===== Phone: पूरी स्क्रीन पर चले ===== */
+@media (max-width: 480px) {
+    .phone {
+        width: 100%;
+        height: 100vh;
+        height: 100dvh;
+        border: none;
+        border-radius: 0px;
+        box-shadow: none;
+        margin-top: 0px;
+    }
+    #statusbar {
+        width: 100%;
+    }
+    #app {
+        margin-top: 50vh;
+    }
+    .apps {
+        width: 70px;
+        height: 90px;
+        padding: 8px;
+        margin-left: 15px;
+    }
+    #img_of_play_store {
+        width: 70px;
+        height: 70px;
+    }
+    #toolbar {
+        zoom: 0.75;
+        margin-left: 10px;
+    }
+    #eye_filter,
+    #color_filter,
+    #screenshot_flash,
+    #brightness_filter,
+    #night_filter {
+        top: 0px;
+        left: 0px;
+        width: 100%;
+        height: 100%;
+        border-radius: 0px;
+    }
+}
+
+/* ===== छोटे फोन ===== */
+@media (max-width: 360px) {
+    .apps {
+        width: 60px;
+        margin-left: 8px;
+    }
+    #img_of_play_store {
+        width: 60px;
+    }
+    #toolbar {
+        zoom: 0.65;
+    }
+}

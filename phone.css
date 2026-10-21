@@ -1,0 +1,278 @@
+html,body{
+    margin:0;
+    min-height:100%
+}
+body{
+    display:grid;
+    padding-bottom:0px;
+    background:#fff;
+}
+.phone{
+    width:470px;height:970px;
+    background-color: white;
+    border:5px solid black;
+    box-shadow:0 0 15px gray;
+    border-radius:20px;
+    justify-self:center;
+    margin-top:50px;
+    position:relative;
+    overflow:hidden;
+}
+.cam-circle{
+    width:20px;height:20px;
+    border:2px solid gray;
+    background:#444;
+    border-radius:50%;
+    position:absolute;
+    left:50%;
+    margin:5px;
+    transform:translateX(-50%);
+    box-sizing:border-box;
+    z-index:2;
+}
+#statusbar{
+    color: black;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    box-sizing: border-box;
+    gap: 5px;
+    white-space: nowrap;
+}
+#phone_no{
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-behavior: smooth;
+    margin-top: 20px;
+    width: 95%;
+    height: 100px;
+    font-size: 60px;
+    padding: 20px;
+    justify-self: center;
+    color: lightblue;
+}
+.nums{
+    width: 80px;
+    height: 80px;
+    border: 2px solid black;
+    border-radius: 50%;
+    color: black;
+    background-color: lightblue;
+    margin: 20px;
+    padding: 10px;
+    justify-content: center;
+    font-size: 40px;
+    text-align: center;
+}
+.divs{
+    display: flex;
+}
+#back,#ok{
+    font-size: 30px;
+}
+#nums{
+    justify-self: center;
+}
+#head{
+    color: black;
+    justify-self: center;
+    margin: 20px;
+}
+#phone_page{
+    display: none;
+}
+/* Calling screen - additional styles only */
+#phone_page {
+    display: none;
+    width: 100%;
+    height: 100%;
+}
+
+.call-screen {
+    width: 100%;
+    height: 100%;
+    min-height: 420px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 55px 16px 25px;
+    background: radial-gradient(120% 70% at 50% 0, #3a3f4d, #15171d 70%);
+    color: white;
+    font-family: -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+    border-radius: inherit;
+}
+
+.call-avatar {
+    width: 88px;
+    height: 88px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    background: linear-gradient(#9a9aa1, #6b6b72);
+    font-size: 40px;
+    margin-bottom: 18px;
+}
+
+.call-screen.ringing .call-avatar {
+    animation: call-pulse 1.8s ease-in-out infinite;
+}
+
+@keyframes call-pulse {
+    50% {
+    transform: scale(1.06);
+    box-shadow: 0 0 0 12px rgba(255,255,255,.07);
+    }
+}
+
+.call-name {
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.call-number {
+    margin-top: 8px;
+    font-size: 18px;
+    color: #c7c7cc;
+    overflow-wrap: anywhere;
+    text-align: center;
+}
+
+.call-status {
+    margin-top: 12px;
+    font-size: 16px;
+    color: #c7c7cc;
+}
+
+.call-controls {
+    margin-top: auto;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    padding-top: 30px;
+}
+
+.call-action {
+    border: 0;
+    background: transparent;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+}
+
+.call-action span {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    font-size: 25px;
+    background: rgba(255,255,255,.16);
+}
+
+.call-action small {
+    font-size: 12px;
+}
+
+.call-action.active span {
+    background: white;
+    color: #111;
+}
+
+.call-end {
+    width: 72px;
+    height: 72px;
+    flex-shrink: 0;
+    border: 0;
+    border-radius: 50%;
+    background: #ff453a;
+    display: grid;
+    place-items: center;
+    margin-top: 28px;
+    cursor: pointer;
+}
+
+.call-end:active {
+    transform: scale(.9);
+}
+
+.call-end svg {
+    width: 32px;
+    height: 32px;
+    fill: white;
+    transform: rotate(135deg);
+}
+
+.call-screen.ended .call-status {
+    color: #ff453a;
+}
+
+@media (max-height: 600px) {
+    .call-screen {
+        padding-top: 20px;
+        padding-bottom: 15px;
+    }
+
+    .call-avatar {
+        width: 64px;
+        height: 64px;
+        font-size: 32px;
+        margin-bottom: 10px;
+    }
+    
+    .call-controls {
+        padding-top: 12px;
+    }
+    
+    .call-action span {
+        width: 52px;
+        height: 52px;
+    }
+    
+    .call-end {
+        width: 58px;
+        height: 58px;
+        margin-top: 14px;
+    }
+}
+/* ===== Laptop / Tablet: fixed phone size ===== */
+@media (min-width: 481px) {
+    .phone {
+        width: 470px;
+        height: 970px;
+    }
+}
+
+/* ===== Mobile: fixed phone size (full screen) ===== */
+@media (max-width: 480px) {
+    .phone {
+        width: 100vw;
+        height: 100vh;
+        height: 100dvh;
+        border: none;
+        border-radius: 0px;
+        box-shadow: none;
+        margin-top: 0px;
+    }
+    .nums {
+        width: 60px;
+        height: 60px;
+        margin: 12px;
+        padding: 8px;
+        font-size: 32px;
+    }
+    #back,
+    #ok {
+        font-size: 24px;
+    }
+    #phone_no {
+        font-size: 48px;
+    }
+}

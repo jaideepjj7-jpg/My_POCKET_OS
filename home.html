@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>HOME SCREEN</title>
+        <link rel="stylesheet" href="home.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    </head>
+    <body>
+        <div class="phone">
+            <div id="home">
+                <div id="statusbar">
+                    <h3 id="network_text">JIO 4G | JIO</h3>
+                    <div class="cam-circle" aria-hidden="true"></div>
+                    <h3><span id="icons_bar"></span><span>📶 | </span><span id="battery">Checking…</span></h3>
+                </div>
+                <br>
+                <div id="toolbar">
+                    <div id="tools1">
+                        <div class="feature">
+                            <div class="tools"><i class="fa-solid fa-wifi"style="font-size:24px; color:white; justify-self:center;"id="wifisign"align = "center"></i></div>
+                            <h5 class="textw"align="center">wifi</h5>
+                        </div>
+                        <div class="vertical-line"></div>
+                        <div class="feature">
+                            <div class="tools"><i class="fa-brands fa-bluetooth-b"style="font-size:24px; color:white; justify-self:center;"id="toothsign"align = "center"></i></div>
+                            <h5 class="textw"align="center">bluetooth</h5>
+                        </div>
+ 
+                        <div class="feature">
+                            <div class="tools"><i class="fa-solid fa-eye"style="font-size:24px; color:white; justify-self:center;"id="eyesign"align = "center"></i></div>
+                            <h5 class="textw"align="center">Eye prot mode</h5>
+                        </div>
+
+                        <div class="feature">
+                            <div class="tools"><i class="fa-solid fa-plane"style="font-size:24px; color:white; justify-self:center;"id="airplanesign"align = "center"></i></div>
+                            <h5 class="textw"align="center">Airplane mode</h5>
+                        </div>
+                        
+                        <div class="feature">
+                            <div class="tools"><i class="fa-solid fa-battery-half"style="font-size:24px; color:white; justify-self:center;"id="batterysign"align = "center"></i></div>
+                            <h5 class="textw"align="center">Battery saver</h5>
+                        </div>
+                    </div>
+                    <div id="tools2">
+                        <div class="feature">
+                            <div class="tools"><i class="fa-solid fa-universal-access"style="font-size:24px; color:white; justify-self:center;"id="assisign"align = "center"></i></div>
+                            <h5 class="textw"align="center">Screen assistant</h5>
+                        </div>
+                        
+                        <div class="feature">
+                            <div class="tools"><i class="fa-solid fa-gauge"style="font-size:24px; color:white; justify-self:center;"id="datasign"align = "center"></i></div>
+                            <h5 class="textw"align="center">Data saver</h5>
+                        </div>
+
+                        <div class="feature">
+                            <div class="tools"><i class="fa-solid fa-bell-slash"style="font-size:24px; color:white; justify-self:center;"id="disturbsign"align = "center"></i></div>
+                            <h5 class="textw"align="center">Do not disturb</h5>
+                        </div>
+                        <div class="feature">
+                            <div class="tools"><i class="fa-solid fa-moon"style="font-size:24px; color:white; justify-self:center;"id="nightsign"align = "center"></i></div>
+                            <h5 class="textw"align="center">Night mode</h5>
+                        </div>
+
+                        <div class="feature">
+                            <div class="restart_tool" id="restart_btn"><i class="fa-solid fa-rotate-right"style="font-size:24px; color:white; justify-self:center;"id="restartsign"align = "center"></i></div>
+                            <h5 class="textw"align="center">Restart</h5>
+                        </div>
+
+                    </div>
+                    <div id="sliders">
+                        <div class="slider_row">
+                            <i class="fa-solid fa-sun"></i>
+                            <input type="range" id="brightness_slider" min="20" max="100" value="100">
+                        </div>
+                        <div class="slider_row">
+                            <i class="fa-solid fa-volume-high" id="volume_icon"></i>
+                            <input type="range" id="volume_slider" min="0" max="100" value="50">
+                        </div>
+                    </div>
+                </div>
+                <br><br>
+                <h1 id="lockicon" aria-label="Locked">🔓</h1>
+        
+                <div id="time_date">
+                    <h1 id="time">--:--</h1>
+                    <h1 id="date">Loading date…</h1>
+                </div>
+                <div id="app">
+                    <div class="apps">
+                        <div id="camera"><h3 id="icons">📷</h3></div>
+                        <h3>Camera</h3>
+                    </div>
+                    <div class="apps">
+                        <div id="phone"><h3 id="icons">📞</h3></div>
+                        <h3>PHONE</h3>
+                    </div>
+                    <div class="apps">
+                        <div id="photos"><h3 id="icons">🖼️</h3></div>
+                        <h3>PHOTOS</h3>
+                    </div>
+                </div>
+                <div id="app1">
+                    <div class="apps" data-app="google">
+                        <div id="google"><h3 id="icons"><img src="https://www.gstatic.com/images/branding/product/1x/gsa_512dp.png"></h3></div>
+                        <h3 id="text_g">GOOGLE</h3>
+                    </div>
+                    <div class="apps" data-app="playstore">
+                        <div id="google_play"><h3 id="icons"><img src="https://www.gstatic.com/android/market_images/web/play_prism_hlock_2x.png" id="img_of_play_store"></h3></div>
+                    </div>
+                    <div class="apps" data-app="flipkart">
+                        <div id="flipkart"><h3 id="icons">🛒</h3></h3></div>
+                        <h3>FLIPkart</h3>
+                    </div>
+                </div>
+                <div id="app1">
+                    <div class="apps" data-app="maps">
+                        <div id="maps"><h3 id="icons">🗺️</h3></h3></div>
+                        <h3 align="center"style="margin-bottom:10px">Maps</h3>
+                    </div>
+                    <div class="apps" data-app="zomato">
+                        <div id="zomato"><h3 id="icons">🍕</h3></h3></div>
+                        <h3>Zomato</h3>
+                    </div>
+                    <div class="apps" data-app="calendar">
+                        <div id="calendar"><h3 id="icons">📆</h3></h3></div>
+                        <h3>Calendar</h3>
+                    </div>
+                </div>
+                <div id="app1">
+                    <div class="apps" data-app="about">
+                        <div id="about"><h3 id="icons">👤</h3></h3></div>
+                        <h3>ABOUT</h3>
+                    </div>
+                    <div class="apps" data-app="weather">
+                        <div id="weather"><h3 id="icons">⛈️</h3></h3></div>
+                        <h3>Weather</h3>
+                    </div>
+                    <div class="apps" data-app="calculator">
+                        <div id="calculator"><h3 id="icons">📠</h3></h3></div>
+                        <h4>Calculator</h4>
+                    </div>
+                </div>
+                <div id="app1">
+                    <div class="apps" data-app="clock">
+                        <div id="clock"><h3 id="icons">🕒</h3></h3></div>
+                        <h3 align="center">Clock</h3>
+                    </div>
+                    <div class="apps" data-app="whatsapp">
+                        <div id="whatsapp"><h3 id="icons">💬</h3></h3></div>
+                        <h4>Finesapp</h4>
+                    </div>
+                </div>
+            </div>
+            <div id="google_frame">
+                
+                <iframe frameborder="0" id="frame"></iframe>
+            </div>
+            <div id="brightness_filter"></div>
+            <div id="night_filter"></div>
+            <div id="eye_filter"></div>
+            <div id="color_filter"></div>
+            <div id="screenshot_flash"></div>
+
+            <div id="panel_handle" aria-label="Open panel">
+                <i class="fa-solid fa-angles-left"></i>
+            </div>
+            <div id="assistant_panel">
+                <div class="panel_option" id="opt_dnd">
+                    <i class="fa-solid fa-bell-slash"></i>
+                    <span>DND</span>
+                </div>
+                <div class="panel_option" id="opt_eye">
+                    <i class="fa-solid fa-eye"></i>
+                    <span>Eye care</span>
+                </div>
+                <div class="panel_option" id="opt_color">
+                    <i class="fa-solid fa-palette"></i>
+                    <span>Colors</span>
+                </div>
+                <div class="panel_option" id="opt_screenshot">
+                    <i class="fa-solid fa-camera"></i>
+                    <span>Screenshot</span>
+                </div>
+                <div class="panel_option" id="opt_close">
+                    <i class="fa-solid fa-xmark"></i>
+                    <span>Close</span>
+                </div>
+            </div>
+            
+        </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+        <script src="home.js"></script>
+    </body>
+</html>

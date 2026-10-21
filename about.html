@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#080b16">
+<meta name="description" content="About Jaideep Singh and Pocket OS — a creative operating-system-inspired web project.">
+<title>About Us — Jaideep Singh & Pocket OS</title>
+<style>
+:root{--bg:#080b16;--panel:rgba(17,24,45,.76);--line:rgba(148,163,184,.18);--text:#edf2ff;--muted:#a4aec8;--cyan:#63e6ff;--violet:#a78bfa;--pink:#ff80bf;--green:#8bffbd}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(ellipse at 12% 5%,#18234b 0,transparent 35%),radial-gradient(ellipse at 90% 35%,#281448 0,transparent 30%),var(--bg);color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.65;overflow-x:hidden}
+#stars{position:fixed;inset:0;width:100%;height:100%;pointer-events:none;z-index:-1;opacity:.7}
+a{color:inherit;text-decoration:none}.wrap{width:min(1120px,92%);margin:auto}.nav{position:sticky;top:0;z-index:10;background:rgba(8,11,22,.76);backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}.nav-inner{height:72px;display:flex;align-items:center;justify-content:space-between;gap:20px}.brand{font-weight:850;letter-spacing:-.04em;font-size:1.15rem}.brand span{color:var(--cyan)}.nav-links{display:flex;gap:24px;color:var(--muted);font-size:.92rem}.nav-links a:hover{color:var(--cyan)}.menu-btn{display:none;background:none;color:var(--text);border:1px solid var(--line);border-radius:10px;padding:8px 12px;font-size:1.1rem}
+.hero{padding:100px 0 82px;display:grid;grid-template-columns:1.2fr .8fr;align-items:center;gap:60px;min-height:570px}.eyebrow{display:inline-flex;align-items:center;gap:9px;border:1px solid #334466;background:#111a30;padding:7px 12px;border-radius:999px;color:#b8c8e9;font-size:.82rem}.pulse{width:8px;height:8px;background:var(--green);border-radius:50%;box-shadow:0 0 14px var(--green);animation:pulse 1.8s infinite}@keyframes pulse{50%{opacity:.4;transform:scale(.8)}}h1{font-size:clamp(2.8rem,6vw,5.5rem);line-height:1.02;letter-spacing:-.07em;margin:24px 0}h1 .gradient{background:linear-gradient(100deg,var(--cyan),#a9a0ff 55%,var(--pink));-webkit-background-clip:text;background-clip:text;color:transparent}.lead{color:var(--muted);font-size:1.12rem;max-width:650px}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;border-radius:12px;padding:12px 18px;font-weight:750;border:1px solid var(--line);transition:transform .2s,box-shadow .2s}.btn:hover{transform:translateY(-3px)}.btn-primary{background:linear-gradient(100deg,#63e6ff,#a78bfa);color:#09101e;border:0;box-shadow:0 10px 35px #63e6ff22}.btn-secondary{background:#ffffff08}.visual{position:relative;display:grid;place-items:center;min-height:350px}.orbital{width:min(330px,75vw);aspect-ratio:1;border-radius:50%;border:1px solid #91a8ff55;display:grid;place-items:center;position:relative;box-shadow:0 0 80px #8b5cf622,inset 0 0 55px #63e6ff0b;animation:float 6s ease-in-out infinite}.orbital:before,.orbital:after{content:"";position:absolute;border:1px solid #63e6ff55;border-radius:50%;inset:13%;transform:rotate(55deg) scaleX(1.5)}.orbital:after{transform:rotate(-55deg) scaleX(1.5);border-color:#ff80bf55}.core{width:130px;height:130px;border-radius:35px;display:grid;place-items:center;font-size:3.2rem;background:linear-gradient(145deg,#263b65,#17132e);border:1px solid #ffffff2c;box-shadow:0 0 45px #63e6ff28}.satellite{position:absolute;width:14px;height:14px;border-radius:50%;background:var(--cyan);box-shadow:0 0 20px var(--cyan);top:18%;right:15%}.orbit-label{position:absolute;bottom:0;right:0;background:#10172b;border:1px solid var(--line);padding:12px 16px;border-radius:14px;color:var(--muted);font-size:.85rem;box-shadow:0 20px 60px #0005}@keyframes float{50%{transform:translateY(-12px) rotate(2deg)}}
+section{padding:76px 0}.section-head{max-width:700px;margin-bottom:32px}.kicker{color:var(--cyan);font-size:.78rem;text-transform:uppercase;letter-spacing:.18em;font-weight:800}.section-head h2{font-size:clamp(2rem,4vw,3.2rem);letter-spacing:-.055em;line-height:1.1;margin:10px 0}.section-head p{color:var(--muted)}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.card{background:linear-gradient(145deg,#111a30c9,#0e1324d9);border:1px solid var(--line);border-radius:20px;padding:24px;transition:transform .25s,border-color .25s;position:relative;overflow:hidden}.card:hover{transform:translateY(-6px);border-color:#63e6ff66}.card-icon{width:45px;height:45px;border-radius:13px;display:grid;place-items:center;background:#63e6ff13;border:1px solid #63e6ff2a;font-size:1.35rem;margin-bottom:18px}.card h3{margin:0 0 8px;font-size:1.15rem}.card p{color:var(--muted);margin:0;font-size:.96rem}.tags{display:flex;flex-wrap:wrap;gap:9px;margin-top:20px}.tag{font-size:.83rem;padding:7px 11px;border-radius:9px;background:#111a30;border:1px solid #ffffff16;color:#d9e6ff}.about-layout{display:grid;grid-template-columns:1fr 1fr;gap:22px;align-items:stretch}.feature-panel{border-radius:24px;padding:30px;background:linear-gradient(135deg,#111a30,#17102b);border:1px solid var(--line)}.feature-panel h3{font-size:1.5rem;letter-spacing:-.04em;margin:8px 0 12px}.feature-panel p{color:var(--muted)}.mini-terminal{margin-top:22px;border:1px solid #334155;border-radius:14px;overflow:hidden;background:#070b14;font: .88rem/1.8 ui-monospace,SFMono-Regular,Consolas,monospace}.terminal-top{padding:9px 13px;border-bottom:1px solid #263247;color:#94a3b8;display:flex;gap:6px}.dot{width:8px;height:8px;border-radius:50%;background:#ff718b}.dot:nth-child(2){background:#ffd166}.dot:nth-child(3){background:#8bffbd}.terminal-body{padding:15px;color:#a9bddc}.terminal-body b{color:var(--green);font-weight:500}.terminal-body span{color:var(--cyan)}.timeline{display:grid;gap:15px}.step{display:grid;grid-template-columns:44px 1fr;gap:14px;align-items:start}.step-num{width:40px;height:40px;border:1px solid #63e6ff55;background:#63e6ff0d;border-radius:12px;display:grid;place-items:center;color:var(--cyan);font-weight:800}.step h4{margin:0 0 4px}.step p{margin:0;color:var(--muted);font-size:.94rem}.note{border-left:3px solid var(--violet);padding:13px 16px;background:#a78bfa0b;color:#c8c9e8;border-radius:0 12px 12px 0;margin-top:20px;font-size:.92rem}.cta{padding:42px;border-radius:28px;border:1px solid #63e6ff35;background:radial-gradient(ellipse at 100% 0,#30235b80,transparent 50%),linear-gradient(130deg,#111a30,#101225);display:flex;align-items:center;justify-content:space-between;gap:30px}.cta h2{font-size:clamp(1.8rem,4vw,2.8rem);letter-spacing:-.05em;line-height:1.1;margin:0 0 10px}.cta p{color:var(--muted);margin:0}.footer{border-top:1px solid var(--line);padding:30px 0;color:var(--muted);font-size:.88rem}.footer-inner{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap}.reveal{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease}.reveal.visible{opacity:1;transform:none}.top-btn{position:fixed;right:20px;bottom:20px;width:44px;height:44px;border-radius:13px;background:#151d34;border:1px solid var(--line);color:var(--text);font-size:1.1rem;display:none;cursor:pointer;z-index:5}.top-btn.show{display:block}
+@media(max-width:780px){.hero{grid-template-columns:1fr;gap:20px;padding:70px 0 45px}.visual{min-height:300px}.grid{grid-template-columns:1fr 1fr}.about-layout{grid-template-columns:1fr}.nav-links{display:none;position:absolute;top:72px;left:0;right:0;background:#0b1020;padding:20px 4%;border-bottom:1px solid var(--line);flex-direction:column;gap:15px}.nav-links.open{display:flex}.menu-btn{display:block}.cta{align-items:flex-start;flex-direction:column}}@media(max-width:520px){.grid{grid-template-columns:1fr}.hero{padding-top:55px}section{padding:55px 0}.card,.feature-panel{padding:21px}.cta{padding:27px}.orbital{width:260px}.core{width:105px;height:105px;font-size:2.5rem}}body.calm-motion *,body.calm-motion *::before,body.calm-motion *::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}body.calm-motion #stars{opacity:.2}@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important;transition-duration:.01ms!important}.reveal{opacity:1;transform:none}}
+
+/* Phone-shaped viewport */
+body{min-height:100vh;display:flex;justify-content:center;align-items:flex-start;padding:50px 12px 40px;background:#171a22}
+.phone-shell{width:min(470px,100%);height:min(970px,calc(100vh - 32px));min-height:520px;max-width:100%;margin:0 auto;position:relative;overflow-x:hidden;overflow-y:auto;box-sizing:border-box;border:5px solid #000;border-radius:20px;box-shadow:0 0 15px grey; background-color: black,radial-gradient(ellipse at top,#18234b,#080b16 65%);background-size:cover;background-position:center;background-repeat:no-repeat;isolation:isolate;scrollbar-width:thin;scrollbar-color:#48536b #080b16}
+.phone-shell #stars{position:absolute;inset:0;width:100%;height:100%;z-index:-1}
+.phone-shell .cam-circle{width:20px;height:20px;border:2px solid grey;background:#444;border-radius:50%;position:absolute;left:50%;top:5px;margin:5px 0 0;transform:translateX(-50%);box-sizing:border-box;z-index:20;box-shadow:0 0 0 3px #0008,0 0 8px #000}
+.phone-shell .nav{position:sticky;top:0}
+.phone-shell .nav-inner{padding-top:22px}
+.phone-shell .hero{padding-top:55px}
+.phone-shell .top-btn{position:sticky;float:right;bottom:12px;margin-right:12px}
+@media(max-width:520px){body{padding:20px 8px}.phone-shell{height:min(970px,calc(100vh - 40px));width:470px}}
+/* ===== Laptop / Tablet: fixed phone size ===== */
+@media (min-width: 481px) {
+    body {
+        padding: 50px 12px 40px;
+    }
+    .phone-shell {
+        width: 470px;
+        max-width: 100%;
+        height: 970px;
+    }
+}
+
+/* ===== Mobile: fixed phone size (full screen) ===== */
+@media (max-width: 480px) {
+    body {
+        padding: 0px;
+    }
+    .phone-shell {
+        width: 100vw;
+        max-width: 100vw;
+        height: 100vh;
+        height: 100dvh;
+        min-height: 0px;
+        border: none;
+        border-radius: 0px;
+        box-shadow: none;
+    }
+}
+
+/* Keep every child inside the phone's inner viewport */
+.phone-shell,.phone-shell *{box-sizing:border-box;min-width:0}
+.phone-shell img,.phone-shell svg,.phone-shell video,.phone-shell canvas{max-width:100%}
+.phone-shell .wrap{width:100%;max-width:100%;padding-left:14px;padding-right:14px;margin-left:auto;margin-right:auto}
+.phone-shell .nav-inner{height:auto;min-height:64px;gap:8px;flex-wrap:wrap}
+.phone-shell .nav-links{gap:12px}
+.phone-shell .hero{grid-template-columns:minmax(0,1fr);gap:10px;padding:50px 0 30px;min-height:0}
+.phone-shell .hero>div:first-child{min-width:0}
+.phone-shell h1{font-size:clamp(2rem,9vw,3.3rem);overflow-wrap:anywhere}
+.phone-shell .lead{font-size:1rem}
+.phone-shell .visual{min-height:220px}
+.phone-shell .orbital{width:min(220px,72vw)}
+.phone-shell .core{width:92px;height:92px}
+.phone-shell section{padding:34px 0}
+.phone-shell .grid{grid-template-columns:minmax(0,1fr);gap:12px}
+.phone-shell .about-layout{grid-template-columns:minmax(0,1fr);gap:12px}
+.phone-shell .card,.phone-shell .feature-panel{padding:17px;border-radius:16px}
+.phone-shell .cta{padding:22px;gap:18px}
+.phone-shell .footer-inner{flex-direction:column;gap:8px}
+.phone-shell .tags{gap:6px}
+.phone-shell .tag{overflow-wrap:anywhere}
+.phone-shell .actions{gap:8px}
+.phone-shell .btn{max-width:100%;white-space:normal}
+.phone-shell .nav-links.open{left:0;right:0;width:100%}
+.phone-shell .mini-terminal{max-width:100%;overflow:hidden}
+.phone-shell .terminal-body{overflow-wrap:anywhere}
+.phone-shell .step{grid-template-columns:38px minmax(0,1fr)}
+.phone-shell .step-num{width:34px;height:34px}
+.phone-shell .top-btn{position:sticky;float:right;bottom:12px;margin-right:12px}
+@media(min-width:430px){
+ .phone-shell .grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .phone-shell .grid .card:last-child:nth-child(odd){grid-column:1/-1}
+}
+@media(max-width:380px){
+ .phone-shell{border-width:4px;border-radius:17px}
+ .phone-shell .wrap{padding-left:10px;padding-right:10px}
+ .phone-shell .nav-inner{padding-top:20px}
+ .phone-shell .brand{font-size:1rem}
+ .phone-shell .card,.phone-shell .feature-panel{padding:14px}
+ .phone-shell .cta{padding:17px}
+ .phone-shell .btn{padding:10px 12px;font-size:.9rem}
+}
+
+</style>
+</head>
+<body>
+<div class="phone-shell" id="phoneShell">
+<div class="cam-circle" id="cam-circle" aria-label="Front camera"></div>
+<canvas id="stars" aria-hidden="true"></canvas>
+<header class="nav"><div class="wrap nav-inner"><a class="brand" href="#home">JAIDEEP<span>.</span>DEV</a><nav class="nav-links" id="navLinks"><a href="#about">About Me</a><a href="#skills">Skills</a><a href="#pocket-os">Pocket OS</a><a href="#vision">My Vision</a></nav><div style="display:flex;gap:8px;align-items:center"><button class="btn btn-secondary" id="motionBtn" type="button" style="padding:8px 11px;font-size:.82rem" aria-pressed="false">✨ Effects: On</button><button class="menu-btn" id="menuBtn" aria-label="Toggle navigation" aria-expanded="false">☰</button></div></div></header>
+<main id="home">
+<div class="wrap hero"><div><div class="eyebrow"><span class="pulse"></span> Student • Programmer • Builder</div><h1>Curious mind.<br><span class="gradient">Code in progress.</span></h1><p class="lead">Hey! I'm Jaideep Singh — a student and programmer who loves turning ideas into interactive experiences. I'm building Pocket OS to explore how operating-system-style environments work, one feature at a time.</p><div class="actions"><a class="btn btn-primary" href="#pocket-os">Explore Pocket OS <span>↗</span></a><a class="btn btn-secondary" href="#about">Get to know me ↓</a></div></div><div class="visual" aria-label="Animated abstract orbit illustration"><div class="orbital"><div class="core">⌘</div><span class="satellite"></span><div class="orbit-label">BUILD • TEST • IMPROVE</div></div></div></div>
+<section id="about"><div class="wrap"><div class="section-head reveal"><div class="kicker">01 / The person behind the code</div><h2>A little about me.</h2><p>I'm a 14-year-old student in Class 9 who enjoys programming, experimenting with web technologies, and learning by making things. I believe every project — even a buggy one — can teach you something valuable.</p></div><div class="grid"><article class="card reveal"><div class="card-icon">🎓</div><h3>Student first</h3><p>I'm currently in Class 9, balancing school with curiosity-driven coding projects and learning new concepts along the way.</p></article><article class="card reveal"><div class="card-icon">💻</div><h3>Hands-on learner</h3><p>I learn by building, testing, fixing mistakes, and trying again. Practical projects help me understand how code works in the real world.</p></article><article class="card reveal"><div class="card-icon">🚀</div><h3>Always improving</h3><p>I don't expect every project to be perfect. I treat bugs as part of development and keep improving my work step by step.</p></article></div></div></section>
+<section id="skills"><div class="wrap"><div class="section-head reveal"><div class="kicker">02 / My toolbox</div><h2>Technologies I work with.</h2><p>These are the languages and tools I explore to create websites, logic, and small applications.</p></div><div class="about-layout"><div class="feature-panel reveal"><div class="kicker">Web development</div><h3>From pixels to interactions.</h3><p>HTML gives a page its structure, CSS shapes its appearance, and JavaScript makes it interactive. Together, they are the core tools behind Pocket OS.</p><div class="tags"><span class="tag">HTML5</span><span class="tag">CSS3</span><span class="tag">JavaScript</span></div></div><div class="feature-panel reveal"><div class="kicker">Programming & backend</div><h3>Exploring beyond the browser.</h3><p>I also work with general-purpose programming and backend tools to broaden my understanding of how software is built.</p><div class="tags"><span class="tag">Python</span><span class="tag">C++</span><span class="tag">Flask</span></div></div></div><p class="note reveal">My skills are a work in progress. I'm still learning, practicing, and discovering better ways to write and organize code.</p></div></section>
+<section id="pocket-os"><div class="wrap"><div class="section-head reveal"><div class="kicker">03 / The main project</div><h2>Meet <span style="color:var(--cyan)">Pocket OS.</span></h2><p>A browser-based, operating-system-inspired project made for fun, curiosity, and learning. It is my way of exploring the ideas that make a desktop environment feel like a system.</p></div><div class="about-layout"><div class="feature-panel reveal"><div class="card-icon">▣</div><h3>A mini desktop experience</h3><p>Pocket OS is built primarily with vanilla HTML, CSS, and JavaScript — without relying on a large front-end framework for its core interface. The goal is to experiment with familiar desktop-style interactions inside a web page.</p><p>Depending on the features implemented, a project like this can include a desktop layout, app-like panels, menus, windows, settings, and small utilities. Each feature is an opportunity to learn how interface state and interactions fit together.</p><div class="tags"><span class="tag">Vanilla JavaScript</span><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">UI experiments</span></div></div><div class="feature-panel reveal"><div class="kicker">Why I started</div><h3>Curiosity over perfection.</h3><p>I started Pocket OS for fun because I wanted to understand what goes into making an operating system and a desktop-like environment. I wanted to explore the moving parts, the design decisions, and the logic behind interactive software.</p><div class="mini-terminal"><div class="terminal-top"><i class="dot"></i><i class="dot"></i><i class="dot"></i><span style="margin-left:8px">pocket-os / dev-log</span></div><div class="terminal-body"><div><span>></span> project.start()</div><div><span>></span> learn_by_building = <b>true</b></div><div><span>></span> bugs_found = <b>"a lot"</b></div><div><span>></span> keep_improving()</div><div><span>></span> <b>Ready for the next update_</b></div></div></div></div></div><div class="grid" style="margin-top:18px"><article class="card reveal"><div class="card-icon">🧩</div><h3>Learning by connecting pieces</h3><p>Building a desktop-like interface teaches me how components, events, styling, and application state can work together.</p></article><article class="card reveal"><div class="card-icon">🐛</div><h3>Bugs are part of the journey</h3><p>Pocket OS still has bugs and rough edges. I know it isn't perfect, and I'm working to fix issues and improve it as I learn more.</p></article><article class="card reveal"><div class="card-icon">🔧</div><h3>Small, steady updates</h3><p>My approach is to experiment, notice what doesn't work, make changes, and keep moving forward rather than waiting for everything to be perfect.</p></article></div><p class="note reveal"><strong>Quick clarification:</strong> Pocket OS is a learning project that runs in a browser; it is not a replacement for a real operating system or a claim to implement a full OS kernel. The project is about exploring OS-inspired ideas through web development.</p></div></section>
+<section id="vision"><div class="wrap"><div class="section-head reveal"><div class="kicker">04 / The process</div><h2>How I like to build.</h2><p>Every project is a cycle of ideas, experiments, discoveries, and improvements.</p></div><div class="about-layout"><div class="timeline reveal"><div class="step"><div class="step-num">01</div><div><h4>Imagine</h4><p>Start with an idea and think about what the experience should do.</p></div></div><div class="step"><div class="step-num">02</div><div><h4>Build</h4><p>Turn the idea into a working experiment using the tools I know.</p></div></div><div class="step"><div class="step-num">03</div><div><h4>Test & debug</h4><p>Try it out, find bugs, and understand why something behaves unexpectedly.</p></div></div><div class="step"><div class="step-num">04</div><div><h4>Improve</h4><p>Make changes, learn from the process, and plan the next feature.</p></div></div></div><div class="feature-panel reveal"><div class="kicker">Looking ahead</div><h3>There's always more to learn.</h3><p>I want to keep growing as a programmer, make Pocket OS more stable and useful, explore new ideas, and strengthen my understanding of software development.</p><p>For me, success isn't only about finishing a project. It's also about understanding more today than I did yesterday.</p><div class="tags"><span class="tag">Curiosity</span><span class="tag">Consistency</span><span class="tag">Creativity</span><span class="tag">Learning</span></div></div></div></div></section>
+<section><div class="wrap"><div class="cta reveal"><div><h2>Thanks for stopping by.</h2><p>This is just one part of my coding journey — Pocket OS and I are still evolving.</p></div><a class="btn btn-primary" href="#home">Back to top ↑</a></div></section>
+</main>
+<footer class="footer"><div class="wrap footer-inner"><span>© <span id="year"></span> Jaideep Singh · Built with curiosity.</span><span>Made with HTML, CSS & vanilla JavaScript</span></div></footer><button class="top-btn" id="topBtn" aria-label="Back to top">↑</button>
+</div><!-- /phone-shell -->
+<script>
+const canvas=document.getElementById('stars'),ctx=canvas.getContext('2d');let stars=[],w=0,h=0;
+function resize(){w=canvas.width=window.innerWidth*devicePixelRatio;h=canvas.height=window.innerHeight*devicePixelRatio;canvas.style.width=window.innerWidth+'px';canvas.style.height=window.innerHeight+'px';stars=Array.from({length:Math.min(130,Math.floor(window.innerWidth/9))},()=>({x:Math.random()*w,y:Math.random()*h,r:Math.random()*1.5+.3,a:Math.random()*.55+.15,s:Math.random()*.18+.03}));}
+function draw(){ctx.clearRect(0,0,w,h);for(const p of stars){p.a+=Math.sin(Date.now()*.001*p.s+p.x)*.001;ctx.fillStyle=`rgba(175,210,255,${Math.max(.08,Math.min(.8,p.a))})`;ctx.beginPath();ctx.arc(p.x,p.y,p.r*devicePixelRatio,0,Math.PI*2);ctx.fill();}requestAnimationFrame(draw)}
+resize();draw();window.addEventListener('resize',resize);
+const observer=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');observer.unobserve(e.target)}}),{threshold:.12});document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+const menuBtn=document.getElementById('menuBtn'),navLinks=document.getElementById('navLinks');menuBtn.addEventListener('click',()=>{const open=navLinks.classList.toggle('open');menuBtn.setAttribute('aria-expanded',String(open));menuBtn.textContent=open?'✕':'☰'});navLinks.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{navLinks.classList.remove('open');menuBtn.setAttribute('aria-expanded','false');menuBtn.textContent='☰'}));
+const topBtn=document.getElementById('topBtn');window.addEventListener('scroll',()=>topBtn.classList.toggle('show',window.scrollY>450));topBtn.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));document.getElementById('year').textContent=new Date().getFullYear();
+const motionBtn=document.getElementById('motionBtn');motionBtn.addEventListener('click',()=>{const calm=document.body.classList.toggle('calm-motion');motionBtn.setAttribute('aria-pressed',String(!calm));motionBtn.textContent=calm?'✨ Effects: Off':'✨ Effects: On';});
+</script>
+</body>
+</html>
