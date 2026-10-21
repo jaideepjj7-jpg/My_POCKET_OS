@@ -73,29 +73,153 @@ img{
 }
 /* ===== Laptop / Tablet: fixed phone size ===== */
 @media (min-width: 481px) {
-    .phone {
-        width: 470px;
-        height: 970px;
+    html,body{
+        margin:0;
+        min-height:100%
+    }
+    body{
+        display:grid;
+        padding-bottom:0px;
+        background:#fff
+        overflow: hidden;
+    }
+    .phone{
+      width:470px;height:970px;
+      background-color: white;
+      border:5px solid black;
+      box-shadow:0 0 15px gray;
+      border-radius:20px;
+      justify-self:center;
+      margin-top:50px;
+      position:relative;
+      overflow-x: hidden;
+      overflow-y: auto
+    
+    }
+    .cam-circle{
+      width:20px;height:20px;
+      border:2px solid gray;
+      background:#444;
+      border-radius:50%;
+      position:absolute;
+      left:50%;
+      margin:5px;
+      transform:translateX(-50%);
+      box-sizing:border-box;
+      z-index:2;
+    }
+    #statusbar{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: nowrap;
+        box-sizing: border-box;
+        gap: 5px;
+        white-space: nowrap;
+    }
+    #heading{
+        justify-self: center
+        
+    }
+    .date{
+        justify-self: left;
+        margin: 20px;
+        color: blue;
+        margin-left: 40px;
+    }
+    .photos{
+        width: 200px;
+        height: 200px;
+        margin: 20px;
+        border: 2px solid black;
+        border-radius: 20px;
+        display: flex;
+    }
+    .photo_div{
+        display: flex;
+    }
+    img{
+        width: 100%;
+        aspect-ratio: 1;
+        object-fit: cover;
+        border-radius: 20px;
+        overflow: hidden;
     }
 }
-
 /* ===== Mobile: fixed phone size (full screen) ===== */
 @media (max-width: 480px) {
-    .phone {
-        width: 100vw;
-        height: 100vh;
-        height: 100dvh;
-        border: none;
-        border-radius: 0px;
-        box-shadow: none;
-        margin-top: 0px;
+html,body{
+        margin:0;
+        min-height:100%
     }
-    .photos {
-        width: calc(50vw - 28px);
-        height: calc(50vw - 28px);
-        margin: 10px;
+    body{
+        display:grid;
+        padding-bottom:0px;
+        background:#fff
+        overflow: hidden;
     }
-    .date {
-        margin-left: 20px;
+    .phone{
+      width:470px;height:970px;
+      background-color: white;
+      border:5px solid black;
+      box-shadow:0 0 15px gray;
+      border-radius:20px;
+      justify-self:center;
+      margin-top:50px;
+      position:relative;
+      overflow-x: hidden;
+      overflow-y: auto
+    
+    }
+    .cam-circle{
+      width:20px;height:20px;
+      border:2px solid gray;
+      background:#444;
+      border-radius:50%;
+      position:absolute;
+      left:50%;
+      margin:5px;
+      transform:translateX(-50%);
+      box-sizing:border-box;
+      z-index:2;
+    }
+    #statusbar{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: nowrap;
+        box-sizing: border-box;
+        gap: 5px;
+        white-space: nowrap;
+    }
+    #heading{
+        justify-self: center
+        
+    }
+    .date{
+        justify-self: left;
+        margin: 20px;
+        color: blue;
+        margin-left: 40px;
+    }
+    .photos{
+        width: 200px;
+        height: 200px;
+        margin: 20px;
+        border: 2px solid black;
+        border-radius: 20px;
+        display: flex;
+    }
+    .photo_div{
+        display: flex;
+    }
+    img{
+        width: 100%;
+        aspect-ratio: 1;
+        object-fit: cover;
+        border-radius: 20px;
+        overflow: hidden;
     }
 }
